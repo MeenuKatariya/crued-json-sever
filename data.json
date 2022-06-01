@@ -1,0 +1,44 @@
+{
+  "students": [
+    {
+      "names": "Meenu Katariya",
+      "ages": 56,
+      "genders": "male",
+      "mark": 67,
+      "cohort": {},
+      "id": 1
+    },
+    {
+      "name": "mamta",
+      "age": 45,
+      "gender": "female",
+      "mark": 87,
+      "cohorts": "ptweb3",
+      "id": 2
+    },
+    {
+      "name": "matecgv",
+      "age": 34,
+      "gender": "male",
+      "marks": {},
+      "cohort": {},
+      "id": 3
+    },
+    {
+      "name": "rtyuu",
+      "age": 43,
+      "gender": "female",
+      "marks": 56,
+      "cohorts": "43",
+      "id": 4
+    },
+    {
+      "name": "rthjkk",
+      "age": 34,
+      "gender": "fds",
+      "marks": 53,
+      "cohorts": "efbb",
+      "id": 5
+    }
+  ]
+}

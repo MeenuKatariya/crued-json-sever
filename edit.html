@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <div id="container"></div>
+    
+      <div id="form">
+          <input type="text" id="name" placeholder="Name">
+          <input type="text" id="age" placeholder="age">
+          <input type="text" id="gender" placeholder="gender">
+          <input type="text" id="marks" placeholder="marks">
+          <input type="text" id="cohort" placeholder="cohort">
+          <button onclick="editStudent()">edit Student</button>
+      </div>
+</body>
+<script>
+    const studentId=localStorage.getItem("studentId")
+    ? localStorage.getItem("studentId")
+    : "";
+// console.log(studentId)
+const editStudent=async ()=>{
+   try{
+     console.log(1)
+    let res=await fetch(`http://localhost:3000/students/${studentId}`)
+    let data=await res.json();
+    console.log(data)
+   const {id,name,age,gender,marks,cohort}=data;
+   console.log(id,name)
+   document.querySelector("#name").value=name
+   document.querySelector("#age").value=age
+   document.querySelector("#gender").value=gender
+   document.querySelector("#marks").value=marks
+   document.querySelector("#cohort").value=cohort
+//    document.querySelector("#name").value=name
+//    document.querySelector("#name").value=name
+
+   }catch(error)
+   {
+       console.log(error)
+   }
+}
+</script>
+</html>
